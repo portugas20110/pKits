@@ -1,4 +1,4 @@
-# 🎁 pKits — Plugin de Kits Completo
+# pKits — Plugin de Kits
 
 Um plugin **100% configurável** para criares e gerires kits no teu servidor, com menu paginado, preview do conteúdo e um **editor in-game completo**. Não precisas de mexer em ficheiros para criar ou alterar um kit.
 
