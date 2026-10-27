@@ -1,0 +1,55 @@
+prefix: "<gradient:#f6d365:#fda085><bold>pKits</bold></gradient> <dark_gray>» <reset>"
+player-only: "<red>Apenas jogadores podem usar este comando."
+no-permission: "<red>Você não tem permissão para isso."
+kit-not-found: "<red>O kit <white>%kit-id%<red> não existe."
+reloaded: "<green>Configurações e kits recarregados."
+
+claim:
+  success: "<green>Você resgatou o kit %kit-name%<green>."
+  no-permission: "<red>Você não tem permissão para resgatar o kit %kit-name%<red>."
+  on-cooldown: "<red>Aguarde <white>%remaining%<red> para resgatar o kit %kit-name%<red> novamente."
+  already-claimed: "<red>Você já resgatou o kit %kit-name%<red> e ele só pode ser usado uma vez."
+
+usage:
+  create: "<red>Uso: <white>/kit criar [nome]"
+  edit: "<red>Uso: <white>/kit editar [nome]"
+  delete: "<red>Uso: <white>/kit deletar [nome]"
+  value: "<red>Uso: <white>/kit valor [texto]"
+
+help:
+  - "<gradient:#f6d365:#fda085><bold>pKits</bold></gradient> <dark_gray>- <gray>comandos"
+  - "<yellow>/kits <dark_gray>» <gray>abre o menu de kits"
+  - "<yellow>/kit [nome] <dark_gray>» <gray>resgata um kit"
+  - "<yellow>/kit criar [nome] <dark_gray>» <gray>cria um kit"
+  - "<yellow>/kit editar [nome] <dark_gray>» <gray>edita um kit"
+  - "<yellow>/kit deletar [nome] <dark_gray>» <gray>remove um kit"
+  - "<yellow>/kit reload <dark_gray>» <gray>recarrega os ficheiros"
+  - "<yellow>/kit valor [texto] <dark_gray>» <gray>responde a um pedido de texto do editor"
+
+editor:
+  create-hint: "<gray>Coloque os itens do kit <white>%kit-id%<gray> nos slots e feche o menu para salvar."
+  create-empty: "<red>Nenhum item foi colocado, o kit não foi criado."
+  exists: "<red>Já existe um kit chamado <white>%kit-id%<red>."
+  created: "<green>Kit <white>%kit-id%<green> criado. Use <white>/kit editar %kit-id%<green> para configurar."
+  items-saved: "<green>Itens recebidos do kit <white>%kit-id%<green> salvos."
+  preview-saved: "<green>Itens do preview do kit <white>%kit-id%<green> salvos."
+  preview-reset: "<green>O preview do kit <white>%kit-id%<green> voltou ao padrão."
+  deleted: "<green>Kit <white>%kit-id%<green> removido."
+
+prompt:
+  name: "<click:suggest_command:'/kit valor '><yellow>Digite no chat o novo nome de exibição ou use <white>/kit valor [texto]<yellow> (aceita MiniMessage e gradientes). <gray>(clique aqui para preencher) <yellow>Digite <white>cancelar<yellow> para sair."
+  lore: "<click:suggest_command:'/kit valor '><yellow>Digite no chat a nova linha de descrição ou use <white>/kit valor [texto]<yellow> (aceita MiniMessage e gradientes). <gray>(clique aqui para preencher) <yellow>Digite <white>cancelar<yellow> para sair."
+  cooldown: "<click:suggest_command:'/kit valor '><yellow>Digite o cooldown: <white>7d<yellow>, <white>12h30m<yellow>, <white>90<yellow> (segundos), <white>0<yellow> sem cooldown ou <white>-1<yellow> uso único. Também funciona com <white>/kit valor [tempo]<yellow>. <gray>(clique aqui para preencher)"
+  permission: "<click:suggest_command:'/kit valor '><yellow>Digite a permissão do kit ou <white>nenhuma<yellow> para remover. Também funciona com <white>/kit valor [texto]<yellow>. <gray>(clique aqui para preencher)"
+  icon: "<click:suggest_command:'/kit valor '><yellow>Digite o nome do material do ícone, por exemplo <white>DIAMOND_SWORD<yellow>. Também funciona com <white>/kit valor [material]<yellow>. <gray>(clique aqui para preencher)"
+  shulker-name: "<click:suggest_command:'/kit valor '><yellow>Digite o nome da Shulker Box (aceita MiniMessage, <white>%index%<yellow> e <white>%boxes%<yellow>) ou use <white>/kit valor [texto]<yellow>. Digite <white>nenhuma<yellow> para usar o padrão. <gray>(clique aqui para preencher)"
+
+input:
+  cancel-word: "cancelar"
+  none-word: "nenhuma"
+  cancelled: "<gray>Edição cancelada."
+  no-pending: "<red>Não há nenhuma edição à espera de texto."
+  updated: "<green>Kit <white>%kit-id%<green> atualizado."
+  invalid:
+    cooldown: "<red>Valor de cooldown inválido."
+    icon: "<red>Material inválido."

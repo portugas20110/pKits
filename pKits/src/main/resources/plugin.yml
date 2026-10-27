@@ -1,0 +1,21 @@
+name: pKits
+version: 1.0.0
+main: pkits.PKitsPlugin
+api-version: '1.21'
+description: Sistema de kits com menu, preview e editor in-game
+commands:
+  kits:
+    description: Abre o menu de kits
+    permission: pkits.use
+  kit:
+    description: Gerencia e resgata kits
+    aliases: [pkit]
+permissions:
+  pkits.use:
+    default: true
+  pkits.admin:
+    default: op
+  pkits.bypass.cooldown:
+    default: op
+  pkits.bypass.permission:
+    default: op

@@ -1,0 +1,261 @@
+time-format:
+  days: "d"
+  hours: "h"
+  minutes: "m"
+  seconds: "s"
+
+sounds:
+  success: "entity.player.levelup"
+  error: "entity.villager.no"
+  click: "ui.button.click"
+
+shulker:
+  material: PURPLE_SHULKER_BOX
+  name: "<gradient:#a18cd1:#fbc2eb><bold>Kit</bold></gradient> %kit-name% <dark_gray>(%index%/%boxes%)"
+  lore:
+    - "<gray>Abra esta shulker para pegar"
+    - "<gray>todos os itens do kit."
+
+layout:
+  armor-slots:
+    helmet: 1
+    chestplate: 2
+    leggings: 3
+    boots: 4
+  page-previous:
+    slot: 0
+    material: ARROW
+    name: "<gradient:#f6d365:#fda085>« Página anterior</gradient>"
+    lore:
+      - "<gray>Ir para a página <white>%target%"
+  page-next:
+    slot: 5
+    material: ARROW
+    name: "<gradient:#f6d365:#fda085>Próxima página »</gradient>"
+    lore:
+      - "<gray>Ir para a página <white>%target%"
+  filler:
+    material: GRAY_STAINED_GLASS_PANE
+    name: " "
+  label:
+    material: LIGHT_GRAY_STAINED_GLASS_PANE
+    names:
+      helmet: "<gray>↑ Capacete"
+      chestplate: "<gray>↑ Peitoral"
+      leggings: "<gray>↑ Calças"
+      boots: "<gray>↑ Botas"
+
+menu:
+  title: "<gradient:#f6d365:#fda085><bold>Kits</bold></gradient> <dark_gray>(%page%/%pages%)"
+  rows: 6
+  kit-slots: [10, 11, 12, 13, 14, 15, 16, 28, 29, 30, 31, 32, 33, 34]
+  preview-offset: 9
+  cooldown-none: "<white>Sem cooldown"
+  cooldown-once: "<white>Uso único"
+  permission-none: "<white>Nenhuma"
+  filler:
+    material: BLACK_STAINED_GLASS_PANE
+    name: " "
+  kit-item:
+    name: "%kit-name%"
+    lore:
+      - "%kit-lore%"
+      - ""
+      - "<gray>Cooldown: <white>%cooldown%"
+      - "<gray>Permissão: <white>%permission%"
+      - "<gray>Itens: <white>%items%"
+      - ""
+      - "<gray>Estado: %status%"
+      - ""
+      - "<yellow>Botão esquerdo <dark_gray>» <white>resgatar"
+      - "<yellow>Botão direito <dark_gray>» <white>visualizar"
+  preview-button:
+    material: PAPER
+    name: "<gray>Visualizar %kit-name%"
+    lore:
+      - "%kit-lore%"
+      - ""
+      - "<gray>Estado: %status%"
+      - ""
+      - "<yellow>Clique para ver o conteúdo"
+  status:
+    available: "<green>Disponível"
+    no-permission: "<red>Sem Permissão"
+    on-cooldown: "<gold>Em Cooldown <gray>(%remaining%)"
+    already-claimed: "<red>Já resgatado"
+  previous:
+    slot: 45
+    material: ARROW
+    name: "<gradient:#f6d365:#fda085>« Página anterior</gradient>"
+    lore:
+      - "<gray>Ir para a página <white>%target%"
+  close:
+    slot: 49
+    material: BARRIER
+    name: "<red>Fechar"
+    lore: []
+  next:
+    slot: 53
+    material: ARROW
+    name: "<gradient:#f6d365:#fda085>Próxima página »</gradient>"
+    lore:
+      - "<gray>Ir para a página <white>%target%"
+
+preview:
+  title: "<gradient:#89f7fe:#66a6ff>Preview</gradient> <dark_gray>» <white>%kit-name% <dark_gray>(%page%/%pages%)"
+  back:
+    slot: 8
+    material: ARROW
+    name: "<gradient:#f6d365:#fda085>« Voltar</gradient>"
+    lore:
+      - "<gray>Voltar ao menu de kits"
+
+item-editor:
+  max-pages: 10
+  titles:
+    create: "<gradient:#f6d365:#fda085>Criar kit</gradient> <dark_gray>» <white>%kit-id% <dark_gray>(%page%/%pages%)"
+    received: "<gradient:#f6d365:#fda085>Itens recebidos</gradient> <dark_gray>» <white>%kit-id% <dark_gray>(%page%/%pages%)"
+    preview: "<gradient:#89f7fe:#66a6ff>Itens do preview</gradient> <dark_gray>» <white>%kit-id% <dark_gray>(%page%/%pages%)"
+  action:
+    slot: 8
+    material: LIME_DYE
+    name: "<green>Salvar e voltar"
+    lore:
+      - "<gray>Os itens também são salvos"
+      - "<gray>ao fechar este menu."
+  reset-preview:
+    slot: 7
+    material: TNT
+    name: "<red>Repor preview padrão"
+    lore:
+      - "<gray>O preview voltará a mostrar"
+      - "<gray>os itens recebidos."
+
+editor:
+  title: "<gradient:#f6d365:#fda085>Editar kit</gradient> <dark_gray>» <white>%kit-id%"
+  rows: 4
+  cooldown-none: "<white>Sem cooldown"
+  cooldown-once: "<white>Uso único"
+  permission-none: "<white>Nenhuma"
+  shulker-name-default: "<gray>Padrão do config.yml"
+  no-lore: "<dark_gray>(sem descrição)"
+  filler:
+    material: BLACK_STAINED_GLASS_PANE
+    name: " "
+  states:
+    "on": "<green>Ativado"
+    "off": "<red>Desativado"
+    custom-preview: "<green>Personalizado"
+    default-preview: "<gray>Igual aos itens recebidos"
+  buttons:
+    icon:
+      slot: 4
+      material: ITEM_FRAME
+      name: "<gradient:#f6d365:#fda085><bold>Ícone do kit</bold></gradient>"
+      lore:
+        - "<gray>Material atual: <white>%icon%"
+        - ""
+        - "<yellow>Pegue um item com o cursor e"
+        - "<yellow>clique aqui para trocar o ícone."
+        - "<yellow>Sem item no cursor <dark_gray>» <white>digitar o nome"
+    name:
+      slot: 10
+      material: NAME_TAG
+      name: "<yellow>Nome de exibição"
+      lore:
+        - "<gray>Atual: <reset>%kit-name%"
+        - ""
+        - "<yellow>Clique para alterar"
+    lore:
+      slot: 11
+      material: WRITABLE_BOOK
+      name: "<yellow>Descrição (lore)"
+      lore:
+        - "<gray>Linhas atuais:"
+        - "%current-lore%"
+        - ""
+        - "<yellow>Esquerdo <dark_gray>» <white>adicionar linha"
+        - "<yellow>Direito <dark_gray>» <white>remover última linha"
+        - "<yellow>Shift <dark_gray>» <white>limpar tudo"
+    cooldown:
+      slot: 12
+      material: CLOCK
+      name: "<yellow>Cooldown"
+      lore:
+        - "<gray>Atual: <white>%cooldown%"
+        - ""
+        - "<yellow>Clique para alterar"
+    permission:
+      slot: 13
+      material: TRIPWIRE_HOOK
+      name: "<yellow>Permissão"
+      lore:
+        - "<gray>Atual: <white>%permission%"
+        - ""
+        - "<yellow>Clique para alterar"
+    auto-equip:
+      slot: 14
+      material: IRON_CHESTPLATE
+      name: "<yellow>Auto-equipar armadura"
+      lore:
+        - "<gray>Estado: %auto-equip%"
+        - ""
+        - "<yellow>Clique para alternar"
+    shulker:
+      slot: 15
+      material: SHULKER_BOX
+      name: "<yellow>Entrega em Shulker Box"
+      lore:
+        - "<gray>Estado: %shulker%"
+        - ""
+        - "<yellow>Clique para alternar"
+    shulker-name:
+      slot: 16
+      material: OAK_SIGN
+      name: "<yellow>Nome da Shulker Box"
+      lore:
+        - "<gray>Atual: <reset>%shulker-name%"
+        - ""
+        - "<gray>Use <white>%index%<gray> e <white>%boxes%<gray> para numerar."
+        - "<yellow>Clique para alterar"
+        - "<gray>Digite <white>nenhuma<gray> para usar o padrão."
+    items:
+      slot: 19
+      material: BARREL
+      name: "<yellow>Itens recebidos"
+      lore:
+        - "<gray>Itens atuais: <white>%items%"
+        - ""
+        - "<yellow>Clique para editar"
+    preview-items:
+      slot: 20
+      material: ENDER_CHEST
+      name: "<yellow>Itens do preview"
+      lore:
+        - "<gray>Modo: %preview-mode%"
+        - "<gray>Itens mostrados: <white>%preview-items%"
+        - ""
+        - "<yellow>Clique para editar"
+    glow:
+      slot: 21
+      material: ENCHANTED_BOOK
+      name: "<yellow>Brilho no ícone"
+      lore:
+        - "<gray>Estado: %glow%"
+        - ""
+        - "<yellow>Clique para alternar"
+    slot:
+      slot: 22
+      material: COMPARATOR
+      name: "<yellow>Posição no menu"
+      lore:
+        - "<gray>Atual: <white>%slot%"
+        - ""
+        - "<yellow>Esquerdo <dark_gray>» <white>+1"
+        - "<yellow>Direito <dark_gray>» <white>-1"
+        - "<yellow>Shift <dark_gray>» <white>±5"
+    close:
+      slot: 31
+      material: BARRIER
+      name: "<red>Fechar"
+      lore: []
